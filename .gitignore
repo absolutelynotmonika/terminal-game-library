@@ -3,3 +3,4 @@ CMakeFiles
 cmake_install.cmake
 build/*
 .cache
+compile_commands.json

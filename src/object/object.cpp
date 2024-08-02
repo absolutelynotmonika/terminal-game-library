@@ -1,4 +1,4 @@
-#include "renderer/object.h"
+#include "object/object.h"
 
 Object::Object(char value, int x, int y)
    :  x(x),

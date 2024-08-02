@@ -1,6 +1,11 @@
 #pragma once
 
+#include "object/object.h"
 #include "utils.h"
+#include <vector>
+#include <iostream>
+
+#include "renderer/renderer.h"
 
 class Window {
    int w, h;
@@ -10,5 +15,6 @@ public:
 
    int getWidth();
    int getHeight();
-   void run();
+   void clear();
+   void draw(Renderer& renderer);
 };

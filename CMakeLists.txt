@@ -10,7 +10,7 @@ set(
    CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build
 )
 
-file(GLOB SOURCES "src/*/*.cpp" "main.cpp")
+file(GLOB SOURCES "src/*/*.cpp" "src/main.cpp" "src/utils.cpp")
 add_executable(main ${SOURCES})
 
 include_directories(headers)

@@ -129,6 +129,126 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+src/game_errors/game_errors.o: src/game_errors/game_errors.cpp.o
+.PHONY : src/game_errors/game_errors.o
+
+# target to build an object file
+src/game_errors/game_errors.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/game_errors/game_errors.cpp.o
+.PHONY : src/game_errors/game_errors.cpp.o
+
+src/game_errors/game_errors.i: src/game_errors/game_errors.cpp.i
+.PHONY : src/game_errors/game_errors.i
+
+# target to preprocess a source file
+src/game_errors/game_errors.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/game_errors/game_errors.cpp.i
+.PHONY : src/game_errors/game_errors.cpp.i
+
+src/game_errors/game_errors.s: src/game_errors/game_errors.cpp.s
+.PHONY : src/game_errors/game_errors.s
+
+# target to generate assembly for a file
+src/game_errors/game_errors.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/game_errors/game_errors.cpp.s
+.PHONY : src/game_errors/game_errors.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/object/object.o: src/object/object.cpp.o
+.PHONY : src/object/object.o
+
+# target to build an object file
+src/object/object.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/object/object.cpp.o
+.PHONY : src/object/object.cpp.o
+
+src/object/object.i: src/object/object.cpp.i
+.PHONY : src/object/object.i
+
+# target to preprocess a source file
+src/object/object.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/object/object.cpp.i
+.PHONY : src/object/object.cpp.i
+
+src/object/object.s: src/object/object.cpp.s
+.PHONY : src/object/object.s
+
+# target to generate assembly for a file
+src/object/object.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/object/object.cpp.s
+.PHONY : src/object/object.cpp.s
+
+src/renderer/renderer.o: src/renderer/renderer.cpp.o
+.PHONY : src/renderer/renderer.o
+
+# target to build an object file
+src/renderer/renderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/renderer/renderer.cpp.o
+.PHONY : src/renderer/renderer.cpp.o
+
+src/renderer/renderer.i: src/renderer/renderer.cpp.i
+.PHONY : src/renderer/renderer.i
+
+# target to preprocess a source file
+src/renderer/renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/renderer/renderer.cpp.i
+.PHONY : src/renderer/renderer.cpp.i
+
+src/renderer/renderer.s: src/renderer/renderer.cpp.s
+.PHONY : src/renderer/renderer.s
+
+# target to generate assembly for a file
+src/renderer/renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/renderer/renderer.cpp.s
+.PHONY : src/renderer/renderer.cpp.s
+
+src/utils.o: src/utils.cpp.o
+.PHONY : src/utils.o
+
+# target to build an object file
+src/utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/utils.cpp.o
+.PHONY : src/utils.cpp.o
+
+src/utils.i: src/utils.cpp.i
+.PHONY : src/utils.i
+
+# target to preprocess a source file
+src/utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/utils.cpp.i
+.PHONY : src/utils.cpp.i
+
+src/utils.s: src/utils.cpp.s
+.PHONY : src/utils.s
+
+# target to generate assembly for a file
+src/utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/utils.cpp.s
+.PHONY : src/utils.cpp.s
+
 src/window/window.o: src/window/window.cpp.o
 .PHONY : src/window/window.o
 
@@ -162,6 +282,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... src/game_errors/game_errors.o"
+	@echo "... src/game_errors/game_errors.i"
+	@echo "... src/game_errors/game_errors.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/object/object.o"
+	@echo "... src/object/object.i"
+	@echo "... src/object/object.s"
+	@echo "... src/renderer/renderer.o"
+	@echo "... src/renderer/renderer.i"
+	@echo "... src/renderer/renderer.s"
+	@echo "... src/utils.o"
+	@echo "... src/utils.i"
+	@echo "... src/utils.s"
 	@echo "... src/window/window.o"
 	@echo "... src/window/window.i"
 	@echo "... src/window/window.s"
