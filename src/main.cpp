@@ -12,10 +12,24 @@ int main() {
    Object shit = Object('#', 3, 3);
 
    while (true) {
-      if (input.getKey(win) == TERM_EXIT)
+      int key = input.getKey(win);
+
+      if (key == TERM_EXIT)
          break;
-      if (input.getKey(win) == 'd')
-         shit.x += 1;
+      switch (key) {
+         case 'd':
+            shit.x += 1;
+            break;
+         case 'a':
+            shit.x -= 1;
+            break;
+         case 'w':
+            shit.y -= 1;
+            break;
+         case 's':
+            shit.y += 1;
+            break;
+      }
 
       shit.draw(win);
       win.refresh();

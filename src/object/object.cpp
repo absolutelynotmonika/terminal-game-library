@@ -16,5 +16,5 @@ Object::Object(char value, int x, int y)
  * internals, which refresh() will display.
  */
 void Object::draw(Window& win) {
-   mvwprintw(win.nc_window, this->x, this->y, "%c", this->value);
+   mvwprintw(win.nc_window, this->y, this->x, "%c", this->value);
 }
