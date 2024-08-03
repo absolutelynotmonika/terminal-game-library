@@ -1,5 +1,4 @@
 #include "window/window.h"
-#include "renderer/renderer.h"
 #include "input/input.h"
 
 /* The main file is currently used to test the features
@@ -8,20 +7,19 @@
 
 int main() {
    Window win(800, 600);
-   Renderer renderer;
    InputHandler input;
 
-   auto x = Object('#', 3, 3);
-   renderer.addObject(x);
+   Object shit = Object('#', 3, 3);
 
    while (true) {
       if (input.getKey(win) == TERM_EXIT)
          break;
+      if (input.getKey(win) == 'd')
+         shit.x += 1;
 
-      win.draw(renderer);
+      shit.draw(win);
+      win.refresh();
    }
 
-   win.close();
-   
    return 0;
 }

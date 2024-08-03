@@ -177,53 +177,29 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/renderer/object.o: src/renderer/object.cpp.o
-.PHONY : src/renderer/object.o
+src/object/object.o: src/object/object.cpp.o
+.PHONY : src/object/object.o
 
 # target to build an object file
-src/renderer/object.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/renderer/object.cpp.o
-.PHONY : src/renderer/object.cpp.o
+src/object/object.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/object/object.cpp.o
+.PHONY : src/object/object.cpp.o
 
-src/renderer/object.i: src/renderer/object.cpp.i
-.PHONY : src/renderer/object.i
-
-# target to preprocess a source file
-src/renderer/object.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/renderer/object.cpp.i
-.PHONY : src/renderer/object.cpp.i
-
-src/renderer/object.s: src/renderer/object.cpp.s
-.PHONY : src/renderer/object.s
-
-# target to generate assembly for a file
-src/renderer/object.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/renderer/object.cpp.s
-.PHONY : src/renderer/object.cpp.s
-
-src/renderer/renderer.o: src/renderer/renderer.cpp.o
-.PHONY : src/renderer/renderer.o
-
-# target to build an object file
-src/renderer/renderer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/renderer/renderer.cpp.o
-.PHONY : src/renderer/renderer.cpp.o
-
-src/renderer/renderer.i: src/renderer/renderer.cpp.i
-.PHONY : src/renderer/renderer.i
+src/object/object.i: src/object/object.cpp.i
+.PHONY : src/object/object.i
 
 # target to preprocess a source file
-src/renderer/renderer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/renderer/renderer.cpp.i
-.PHONY : src/renderer/renderer.cpp.i
+src/object/object.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/object/object.cpp.i
+.PHONY : src/object/object.cpp.i
 
-src/renderer/renderer.s: src/renderer/renderer.cpp.s
-.PHONY : src/renderer/renderer.s
+src/object/object.s: src/object/object.cpp.s
+.PHONY : src/object/object.s
 
 # target to generate assembly for a file
-src/renderer/renderer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/renderer/renderer.cpp.s
-.PHONY : src/renderer/renderer.cpp.s
+src/object/object.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/object/object.cpp.s
+.PHONY : src/object/object.cpp.s
 
 src/window/window.o: src/window/window.cpp.o
 .PHONY : src/window/window.o
@@ -264,12 +240,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/renderer/object.o"
-	@echo "... src/renderer/object.i"
-	@echo "... src/renderer/object.s"
-	@echo "... src/renderer/renderer.o"
-	@echo "... src/renderer/renderer.i"
-	@echo "... src/renderer/renderer.s"
+	@echo "... src/object/object.o"
+	@echo "... src/object/object.i"
+	@echo "... src/object/object.s"
 	@echo "... src/window/window.o"
 	@echo "... src/window/window.i"
 	@echo "... src/window/window.s"

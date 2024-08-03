@@ -7,33 +7,34 @@ Window::Window(const int width, const int height)
 {
    initscr();
    raw();
-   keypad(stdscr, true);
    noecho();
+   cbreak();
+   curs_set(false);
+   keypad(stdscr, true);
    nodelay(stdscr, true);
-}
 
-void Window::close() {
-   endwin();
+   this->nc_window = newwin(width, height, 0, 0);
 }
 
 Window::~Window() {
    close();
 }
 
-void Window::draw(Renderer& renderer) const {
-   // loop through the entire screen size
-   for (int x = 0 ; x <= this->w ; x++) {
-      for (int y = 0 ; y <= this->h ; y++ ) {
-         // check if any character matches the current position
-         for (const Object& obj : renderer.getObjects()) {
-            if (obj.x == x && obj.y == y)
-               mvprintw(x, y, "%c", obj.value);
-         }
-      }
-
-      refresh();
-   }
-}
-
 int Window::getWidth() const { return this->w; }
 int Window::getHeight() const { return this->h; }
+
+void Window::close() {
+   delwin(this->nc_window);
+   this->nc_window = nullptr;
+   endwin();
+}
+
+/* This function will refresh your screen at a 
+ * fixed framerate so the changes can actually 
+ * be visible and not immediately clear.
+*/
+void Window::refresh() {
+   wrefresh(this->nc_window);
+   wclear(this->nc_window);
+   usleep(1000000 / 60);
+}

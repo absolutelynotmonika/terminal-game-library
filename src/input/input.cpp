@@ -6,7 +6,7 @@ int InputHandler::getKey(Window& win) {
    if (current_char != ERR)
       this->last_key = current_char;
 
-   return (current_char != ERR) ? current_char : 0;
+   return current_char;
 }
 
 int InputHandler::lastKey() {
