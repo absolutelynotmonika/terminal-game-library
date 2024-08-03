@@ -1,20 +1,20 @@
 #pragma once
 
-#include "object/object.h"
-#include "utils.h"
+#include "renderer/renderer.h"
+#include "renderer/object.h"
 #include <vector>
 #include <iostream>
-
-#include "renderer/renderer.h"
+#include <ncurses.h>
 
 class Window {
-   int w, h;
+   const int w, h;
 
 public:
    Window(int width, int height);
+   ~Window();
 
-   int getWidth();
-   int getHeight();
-   void clear();
-   void draw(Renderer& renderer);
+   void close();
+   int getWidth() const;
+   int getHeight() const;
+   void draw(Renderer& renderer) const;
 };

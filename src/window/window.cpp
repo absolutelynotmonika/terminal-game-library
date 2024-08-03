@@ -1,35 +1,39 @@
 #include "window/window.h"
-#include "utils.h"
+#include <ncurses.h>
 
-Window::Window(int width, int height)
+Window::Window(const int width, const int height)
    :  w(width),
       h(height)
-{}
+{
+   initscr();
+   raw();
+   keypad(stdscr, true);
+   noecho();
+   nodelay(stdscr, true);
+}
 
-void Window::draw(Renderer& renderer) {
-   std::vector<Object> game_objects = renderer.getGameObjects();
-   std::string buffer; // buffer containing the entire screen content
+void Window::close() {
+   endwin();
+}
 
-   clrscr();
+Window::~Window() {
+   close();
+}
 
+void Window::draw(Renderer& renderer) const {
    // loop through the entire screen size
    for (int x = 0 ; x <= this->w ; x++) {
       for (int y = 0 ; y <= this->h ; y++ ) {
          // check if any character matches the current position
-         for (const Object& obj : game_objects) {
-            if (obj.x == x && obj.y == y) {
-               buffer.append(std::string(1, obj.value));
-            }
+         for (const Object& obj : renderer.getObjects()) {
+            if (obj.x == x && obj.y == y)
+               mvprintw(x, y, "%c", obj.value);
          }
-
-         // add a newline at the end of every y position iteration
-         buffer.append("\n");
       }
 
-      // display the buffer
-      std::cout << buffer;
+      refresh();
    }
 }
 
-int Window::getWidth() { return this->w; }
-int Window::getHeight() { return this->h; }
+int Window::getWidth() const { return this->w; }
+int Window::getHeight() const { return this->h; }
