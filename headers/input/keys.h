@@ -5,4 +5,4 @@
  * and etc...
  */
 
-#define TERM_EXIT 3
+#define TERM_EXIT 3 // ctrl + c

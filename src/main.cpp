@@ -1,3 +1,4 @@
+#include "window/flags.h"
 #include "window/window.h"
 #include "input/input.h"
 
@@ -6,7 +7,7 @@
 */
 
 int main() {
-   Window win(800, 600);
+   Window win(800, 600, WINDOW_BORDER);
    InputHandler input;
 
    Object shit = Object('#', 3, 3);

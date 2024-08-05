@@ -1,9 +1,10 @@
 #include "input/input.h"
 
 int InputHandler::getKey(Window& win) {
-   return getch();
-}
+   int key = getch();
 
-int InputHandler::lastKey() {
-   return this->last_key;
+   if (key == ERR)
+      return 0;
+   
+   return key;
 }
